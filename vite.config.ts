@@ -9,7 +9,7 @@ export default defineConfig({
     alias: {
       '@app': path.resolve(__dirname, 'app'),
       '@components': path.resolve(__dirname, 'src/components'),
-      '@styles': path.resolve(__dirname, 'src/styles'),
+      '@styles': path.resolve(__dirname, 'src/app/styles/'),
       '@hooks': path.resolve(__dirname, 'src/hooks'),
       '@router': path.resolve(__dirname, 'src/app/router'),
       '@assets': path.resolve(__dirname, 'src/assets'),
@@ -21,11 +21,11 @@ export default defineConfig({
 
     },
   },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@use "@styles/breakpoints" as *;`,
-      },
-    },
-  },
+  // css: {
+  //   preprocessorOptions: {
+  //     scss: {
+  //       additionalData: `@use "@styles/base/breakpoints.scss" as *;`,
+  //     },
+  //   },
+  // },
 })

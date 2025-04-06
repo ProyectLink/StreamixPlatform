@@ -1,0 +1,46 @@
+.loading-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-neutral-light);
+  
+    &__text {
+      font-size: 80px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      text-align: center;
+        color: transparent;
+      display: flex;
+      gap: 1.2rem;
+    }
+  
+    &__letter {
+      display: inline-block;
+      margin: 0 -0.05em;
+      animation: loading-screen__fade 2s  infinite alternate;
+    }
+  }
+  
+  @keyframes loading-screen__fade {
+    0% {
+      opacity: 1;
+      color: white;
+    }
+    100% {
+      opacity: 0;
+     
+    }
+  }
+  
+  // Animación escalonada para cada letra
+  @for $i from 1 through 10 {
+    .loading-screen__letter:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+  
