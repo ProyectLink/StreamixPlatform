@@ -1,7 +1,12 @@
-
+import { RippleButton } from "@components/atoms/Button/GradientButton/RippleButton"
 
 export const HomePage = () => {
   return (
-    <div>HomePage</div>
+
+  <RippleButton  >
+    Iniciar Sesión
+  </RippleButton>
+   
+  
   )
 }

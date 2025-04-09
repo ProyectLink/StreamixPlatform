@@ -14,6 +14,7 @@ export const AppRoutes: React.FC = () => {
       
         {/* Ruta para una página de error 404 */}
         <Route path="/*" element={<LoadingScreen />} />
+        <Route path="login" element={<LoadingScreen />} />
       </Routes>
     </Router>
   );
