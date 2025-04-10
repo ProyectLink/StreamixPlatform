@@ -56,7 +56,7 @@
       "@styles/*": ["src/app/styles/*"],
       "@hooks/*": ["src/hooks/*"],
       "@router/*": ["src/app/router/*"],
-      "@assets/*": ["src/assets/*"],
+      "@assets/*": ["src/app/assets/*"],
       "@atoms/*": ["src/components/atoms/*"],
       "@layouts/*": ["src/app/layouts/*"],
       "@utils/*": ["src/utils/*"],

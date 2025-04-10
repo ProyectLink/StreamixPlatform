@@ -12,7 +12,7 @@ export default defineConfig({
       '@styles': path.resolve(__dirname, 'src/app/styles/'),
       '@hooks': path.resolve(__dirname, 'src/hooks'),
       '@router': path.resolve(__dirname, 'src/app/router'),
-      '@assets': path.resolve(__dirname, 'src/assets'),
+      '@assets': path.resolve(__dirname, 'src/app/assets'),
       '@atoms': path.resolve(__dirname, 'src/components/atoms'),
       '@layouts': path.resolve(__dirname, 'src/app/layouts'),
       '@utils': path.resolve(__dirname, 'src/utils'),
@@ -21,11 +21,11 @@ export default defineConfig({
 
     },
   },
-  // css: {
-  //   preprocessorOptions: {
-  //     scss: {
-  //       additionalData: `@use "@styles/base/breakpoints.scss" as *;`,
-  //     },
-  //   },
-  // },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use "@styles/base/breakpoints.scss" as *;`,
+      },
+    },
+  },
 })

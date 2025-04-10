@@ -6,23 +6,3 @@
   ],
 
 }
-// {
-//   "compilerOptions": {
-//     "baseUrl": "./",
-//     "paths": {
-//       "@app/*": ["src/app/*"],
-//       "@components/*": ["src/components/*"],
-//       "@styles/*": ["src/app/styles/*"],
-//       "@hooks/*": ["src/hooks/*"],
-//       "@router/*": ["src/app/router/*"],
-//       "@assets/*": ["src/assets/*"],
-//       "@atoms/*": ["src/components/atoms/*"],
-//       "@layouts/*": ["src/app/layouts/*"],
-//       "@utils/*": ["src/utils/*"],
-//       "@store/*": ["src/store/*"],
-//       "@types/*": ["src/types/*"]
-//     }
-//   },
-//   "include": ["src"],
-//   "exclude": ["node_modules"]
-// }
