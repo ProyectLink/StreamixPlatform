@@ -1,14 +1,19 @@
-
-
+import AvatarList from "./components/avatarList/AvatarList"
 function AvatarPages() {
   return (
     <section>
-        <img src="" alt="" />
-        <h1></h1>
-        componente
-
-        <button></button>
-
+        <article>
+            <section> 
+                <img src="" alt="streaMixPhoto" />
+            </section>
+            <article>
+                <h1>¿quien esta viendo ahora?</h1>
+            </article>
+            <AvatarList></AvatarList>
+        <section>
+            <button>administrar perfiles</button>
+        </section>
+        </article>
     </section>
   )
 }
