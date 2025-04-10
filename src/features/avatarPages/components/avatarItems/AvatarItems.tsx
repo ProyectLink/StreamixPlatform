@@ -1,10 +1,11 @@
 
 
-function AvatarItems() {
+function AvatarItems({usuario , icon } : {usuario : string , icon : string}) {
   return (
-    <div>
-      
-    </div>
+   <section className="profile--avatar__block">
+          <img className="profile--avatar__image" src={icon} alt={`${usuario} avatar`} />
+         <span className="profile--avatar__user">{usuario}</span>
+   </section>
   )
 }
 
