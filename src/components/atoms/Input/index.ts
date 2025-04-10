@@ -1,1 +1,1 @@
-export * from "./InputEmailBanner/InputEmailBanner"
+export * from "./input-email-banner/InputEmailBanner"

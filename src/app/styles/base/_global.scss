@@ -1,5 +1,5 @@
 // @import "tailwindcss";
-@use "mixins.scss" as *;
+@use "_breakpoints" as *;
 @font-face {
   font-family: "ClashDisplay-Medium";
   src: url("/fonts/ClashDisplay-Medium.woff2") format("woff2"),
@@ -97,8 +97,12 @@ li {
 [class*="__contentall"] {
   display: block;
   width: 95%;
-  max-width: 128rem;
+  max-width: 120rem;
   margin: 0 auto;
+  
+  @include desktop-medium {
+      max-width: 150rem;
+  }
 }
 body {
   font-family: var(--font-primary);
@@ -107,7 +111,7 @@ body {
   line-height: 1.6;
   position: relative;
   line-height: 1.6;
-  height: 100vh; // ✅ Asegura que ocupe toda la pantalla
+  min-height: 100vh; // ✅ Asegura que ocupe toda la pantalla
 }
 
 a {

@@ -1,1 +1,1 @@
-export * from "./GradientButton/RippleButton"
+export * from "./gradient-button/RippleButton"

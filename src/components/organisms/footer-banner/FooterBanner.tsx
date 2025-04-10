@@ -1,6 +1,6 @@
 import playbanner from "@assets/iconplaybanner.svg";
 import "./footerbaner.scss";
-import { EmailSubscriptionForm } from "@components/molecules/EmailSubscriptionForm/EmailSubscriptionForm";
+import { EmailSubscriptionForm } from "@components/molecules/email-subscription-form/EmailSubscriptionForm";
 
 export const FooterBanner = () => {
   return (

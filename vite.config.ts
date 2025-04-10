@@ -12,6 +12,7 @@ export default defineConfig({
       '@styles': path.resolve(__dirname, 'src/app/styles/'),
       '@hooks': path.resolve(__dirname, 'src/hooks'),
       '@router': path.resolve(__dirname, 'src/app/router'),
+      '@features':path.resolve(__dirname,'src/features'),
       '@assets': path.resolve(__dirname, 'src/app/assets'),
       '@atoms': path.resolve(__dirname, 'src/components/atoms'),
       '@layouts': path.resolve(__dirname, 'src/app/layouts'),

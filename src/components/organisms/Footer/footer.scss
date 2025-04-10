@@ -1,6 +1,6 @@
 @use "@styles/base/breakpoints.scss" as *;
 .footer{
-    width: 100%;
+    width: 100vw;
     background: var(--color-neutral);
     color: white;
     display: flex;

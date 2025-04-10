@@ -4,7 +4,7 @@ import iconfb from "@assets/iconofacebookstreamix.svg";
 import iconig from "@assets/iconoinstraganfooter.svg";
 import icontik from "@assets/iconotiktokstreamix.svg";
 import "./footer.scss";
-import { FooterBanner } from "../FooterBanner/FooterBanner";
+import { FooterBanner } from "../footer-banner/FooterBanner";
 export const Footer = () => {
   const location = useLocation();
   return (
@@ -43,15 +43,11 @@ export const Footer = () => {
             <li>Sobre Streamix</li>
             <li>Mantente en Contacto</li>
             <li>
-            <div>
-              <p>Preguntas Frecuentes</p>
-              <p>
-              Sugerencias y Feedback
-              </p>
-            </div>
-
+              <div>
+                <p>Preguntas Frecuentes</p>
+                <p>Sugerencias y Feedback</p>
+              </div>
             </li>
-         
           </ul>
 
           <ul className="footer__colum4">
