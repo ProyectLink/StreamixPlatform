@@ -1,7 +1,9 @@
-
+import AvatarPages from "../avatarPages/AvatarPages"
 
 export const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <div>HomePage
+   <AvatarPages></AvatarPages>
+    </div>
   )
 }
