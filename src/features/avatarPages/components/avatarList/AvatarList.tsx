@@ -1,10 +1,22 @@
-
+import AvatarItems from "../avatarItems/AvatarItems"
+import { avatar } from "../../data/avatar"
+import { useState } from "react"
+import { AvatarProps } from "../../props"
 
 function AvatarList() {
+const [profileAvatar , setProfileAvatar] = useState <AvatarProps[]>(avatar)
+
+
   return (
-    <div>
-      {/* uso del map de avatar */}
-    </div>
+    <section className="profile--container__avatar">
+      {profileAvatar.map(({id , usuario , perfiles})=> (
+        <AvatarItems
+        key={id}
+        usuario={usuario}
+        icon={perfiles.icon}
+        />
+      )) }
+    </section>
   )
 }
 
