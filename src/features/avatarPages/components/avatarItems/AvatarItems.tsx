@@ -1,4 +1,4 @@
-
+import "./avatarItems.scss"
 
 function AvatarItems({usuario , icon } : {usuario : string , icon : string}) {
   return (

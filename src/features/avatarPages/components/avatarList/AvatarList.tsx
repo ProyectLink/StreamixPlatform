@@ -2,6 +2,7 @@ import AvatarItems from "../avatarItems/AvatarItems"
 import { avatar } from "../../data/avatar"
 import { useState } from "react"
 import { AvatarProps } from "../../props"
+import "./avatarList.scss"
 
 function AvatarList() {
 const [profileAvatar , setProfileAvatar] = useState <AvatarProps[]>(avatar)
