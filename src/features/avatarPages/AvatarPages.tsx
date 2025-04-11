@@ -1,6 +1,7 @@
 import AvatarList from "./components/avatarList/AvatarList"
 import "./avatarPages.scss"
 import streamixLogo from "@assets/logofooter.svg"
+import { ButtonHoverInfo } from "@components/atoms"
 function AvatarPages() {
   return (
     <section className="profile-selector">
@@ -13,8 +14,8 @@ function AvatarPages() {
             
             <AvatarList></AvatarList>
               {/* component button */}
-            <button className="profile-selector__button">administrar perfiles</button>
-      
+              <ButtonHoverInfo> Administrar Perfiles </ButtonHoverInfo>
+           
         </article>
     </section>
   )
