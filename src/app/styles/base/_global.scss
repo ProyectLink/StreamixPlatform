@@ -1,5 +1,5 @@
 // @import "tailwindcss";
-@use "mixins.scss" as *;
+@use "_breakpoints" as *;
 @font-face {
   font-family: "ClashDisplay-Medium";
   src: url("/fonts/ClashDisplay-Medium.woff2") format("woff2"),
@@ -45,8 +45,7 @@
 --cyan-200:#B8F9FB;
 --cyan-100:#D3FBFC;
 --cyan-50:#E6FEFF;
-
-
+//
  --primary-color:#6757FE;
  --primary_color-hover: #523FFE;
  --primary-color-active: #3124B2;
@@ -58,6 +57,7 @@
  --color-neutral-hover:#161247;
 --color-neutral-active:#1E1A65;
 --color-neutral-disabled:#1B1B3F;
+--color-neutral-bg:#04011A;
 --color-neutral-transparent: #04011A40;
 --color-neutral-transparent-hover: #04011A4D;
 --color-neutral-transparent-active: #04011A80;
@@ -66,7 +66,6 @@
 --color-neutral-white-transparent-50: #FFFFFF80;
 --color-neutral-white-transparent-100: #FFFFFF1A;
 --color-enfasis: #08F7FE;
-
 //alerts 
 --color-alert-succes-ligh: #0FEEBF;
 --color-alert-info-light: #2082F1;
@@ -74,8 +73,7 @@
 --color-alert-succes-dark: #06604D;
 --color-alert-info-dark: #063060;
 --color-alert-warning-dark: #940505;
-
- --font-primary:"Inter", serif;
+--font-primary:"Inter", serif;
 }
 html {
   scroll-behavior: smooth;
@@ -99,8 +97,12 @@ li {
 [class*="__contentall"] {
   display: block;
   width: 95%;
-  max-width: 128rem;
+  max-width: 120rem;
   margin: 0 auto;
+  
+  @include desktop-medium {
+      max-width: 150rem;
+  }
 }
 body {
   font-family: var(--font-primary);
@@ -109,7 +111,8 @@ body {
   line-height: 1.6;
   position: relative;
   line-height: 1.6;
-  height: 100vh; // ✅ Asegura que ocupe toda la pantalla
+  min-height: 100vh;
+  background: var(--color-neutral);
 }
 
 a {
@@ -129,4 +132,32 @@ input {
   width: 100%;
   height: 100vh;
   z-index: -1; 
+}
+
+.ripple-effect {
+  position: absolute;
+  background: var(--ripple-color, #fff);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: blink var(--ripple-duration, 500ms) linear;
+  pointer-events: none;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+}
+
+@keyframes blink {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.3;
+  }
+  100% {
+    width: 400px;
+    height: 400px;
+    opacity: 0;
+  }
 }

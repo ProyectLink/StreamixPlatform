@@ -1,0 +1,16 @@
+.input-banner{
+    border: none;
+    display: block;
+    width: 80%;
+    height: 4rem;
+    border-radius: 3.4rem;
+    max-width: 30.1rem;
+    background: #02031D80;
+    border: 1px solid var(--2, #9A92FF);
+    color: #FFFFFFCC;
+    padding: 0 2rem;
+    outline: none;
+    &::placeholder{
+        color: #fff;
+    }
+}

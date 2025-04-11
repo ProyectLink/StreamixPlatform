@@ -1,0 +1,25 @@
+.GradientBtn {
+    display: block;
+    height: 4rem;
+    border: none;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    background: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; 
+    font-size: 1.6rem;
+    transition: transform .1s;
+    outline: unset!important;
+    &:hover{
+        transform: scale(1.05);
+    }
+    pointer-events: auto;
+  }
+  
+  

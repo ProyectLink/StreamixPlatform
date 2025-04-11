@@ -8,7 +8,7 @@ const [profileAvatar , setProfileAvatar] = useState <AvatarProps[]>(avatar)
 
 
   return (
-    <section className="profile--container__avatar">
+    <section className="container-perfil">
       {profileAvatar.map(({id , usuario , perfiles})=> (
         <AvatarItems
         key={id}
