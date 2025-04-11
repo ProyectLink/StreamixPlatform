@@ -1,0 +1,23 @@
+.ButtonHoverInfo{
+    width: 21rem;
+    height: 4rem;
+    border: 1px solid var(--2, #9A92FF);
+    border-radius: 2.5rem;
+    background: transparent;
+    color: white;
+    transition: background-color .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    pointer-events: auto;
+    cursor: pointer;
+    img{
+        margin-top: -0.3rem;
+    }
+    &:hover{
+        background-color: var(--3, #9A92FF);
+        border-color: var(--1, #9A92FF);
+    }
+
+}
