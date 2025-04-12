@@ -1,9 +1,14 @@
+import { secureHeapUsed } from "crypto"
 import "./avatarAdd.scss"
-const AvatarAdd = () => {
+import { IAvatarAdd } from "@features/avatarPages/index"
+const AvatarAdd = ({text , icon} : IAvatarAdd) => {
   return (
-    <div>
-      
-    </div>
+   <section className="profile-AddAvatar">
+    <article className="profile-AddAvatar__image">
+      <img className="profile-AddAvatar__icon" src={icon} alt="" />
+    </article>
+    <span className="profile-AddAvatar__text">{text}</span>
+   </section>
   )
 }
 
