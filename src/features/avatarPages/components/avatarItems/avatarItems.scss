@@ -2,23 +2,26 @@
 
 .profile-avatar{
 width: 12rem;
-  display: flex;
-  flex-direction: column;
- justify-content: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
  align-content: center;
  gap: 1.5rem;
  user-select: none;
- &:active{
-    background-color: white;
-    
- }
+
  &__background{
     height: 12rem;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3rem;
+    border: 2px solid white;
  }
     &__image{
-      height: 12rem;
-      border: 1px solid white;
-      border-radius: 3.9rem;
+      height: 10rem;
+      border-radius: 2rem;
+    
     }
     &__user{
       color: white;

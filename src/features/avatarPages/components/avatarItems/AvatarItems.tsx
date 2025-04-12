@@ -1,6 +1,6 @@
 import "./avatarItems.scss"
-
-function AvatarItems({usuario , icon } : {usuario : string , icon : string}) {
+import { IAvatarItems } from "@features/avatarPages/index"
+function AvatarItems({usuario , icon } : IAvatarItems) {
   return (
    <section className="profile-avatar">
     <div className="profile-avatar__background" >

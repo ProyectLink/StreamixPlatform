@@ -1,5 +1,6 @@
-import AvatarItems from "../avatarItems/AvatarItems"
-import { avatar } from "../../data/avatar"
+import AvatarItems  from "../avatarItems/AvatarItems"
+import AvatarAdd from "../avatarAdd/AvatarAdd"
+import { avatar } from "@features/avatarPages/data/avatar"
 import { useState } from "react"
 import { AvatarProps } from "../../props"
 import iconDefault from "@assets/Union.svg"
@@ -19,8 +20,8 @@ const [profileAvatar , setProfileAvatar] = useState <AvatarProps[]>([])
         icon={perfiles.icon}
         />
       )) 
-    : <AvatarItems 
-    usuario="Nueva Cuenta"
+    : <AvatarAdd 
+    text="Nueva Cuenta"
     icon={iconDefault}
     />
     }
