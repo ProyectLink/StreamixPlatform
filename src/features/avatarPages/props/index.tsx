@@ -14,3 +14,12 @@ export interface Perfile {
     avatarName : string
     icon : string
 }
+
+export interface IAvatarItems {
+    usuario : string
+    icon : string
+}
+export interface IAvatarAdd {
+    text : string
+    icon : string
+}
