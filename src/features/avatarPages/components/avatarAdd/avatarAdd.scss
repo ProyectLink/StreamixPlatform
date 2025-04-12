@@ -1,0 +1,26 @@
+@use "@styles/base/breakpoints.scss" as *;
+
+.profile-AddAvatar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+ 
+    &__image{
+        width: 12rem;
+        height: 12rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3.9rem;
+        background-color: #171245;
+    }
+    &__icon{
+      width: 6rem;
+      height: 6rem;
+    }
+    &__text{
+        font-size: 2rem;
+        color: white;
+    }
+}
