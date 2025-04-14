@@ -7,24 +7,23 @@ import iconDefault from "@assets/Union.svg"
 import "./avatarList.scss"
 
 function AvatarList() {
-const [profileAvatar , setProfileAvatar] = useState <AvatarProps[]>([])
+const [profileAvatar , setProfileAvatar] = useState <AvatarProps[]>(avatar)
 
+let accountCreated = profileAvatar.map( ({id , usuario , perfiles}) => (
+<AvatarItems
+key={id}
+usuario={usuario}
+icon={perfiles.icon}
+/>
+))
 
   return (
     <section className="container-perfil">
-      {profileAvatar.length !== 0 ? 
-      profileAvatar.map(({id , usuario , perfiles})=> (
-        <AvatarItems
-        key={id}
-        usuario={usuario}
-        icon={perfiles.icon}
-        />
-      )) 
-    : <AvatarAdd 
-    text="Nueva Cuenta"
-    icon={iconDefault}
-    />
-    }
+      {accountCreated}
+      <AvatarAdd
+      text="Nueva Cuenta"
+      icon={iconDefault}
+      />
     </section>
   )
 }
