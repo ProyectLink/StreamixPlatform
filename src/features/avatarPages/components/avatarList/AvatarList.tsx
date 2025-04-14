@@ -7,7 +7,7 @@ import iconDefault from "@assets/Union.svg"
 import "./avatarList.scss"
 
 function AvatarList() {
-const [profileAvatar , setProfileAvatar] = useState <AvatarProps[]>(avatar)
+const [profileAvatar , setProfileAvatar] = useState <AvatarProps[]>(avatar || [])
 
 let accountCreated = profileAvatar.map( ({id , usuario , perfiles}) => (
 <AvatarItems
