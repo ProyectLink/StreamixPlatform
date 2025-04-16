@@ -1,0 +1,32 @@
+@use "@styles/base/breakpoints.scss" as *;
+
+.profile-avatar{
+width: 12rem;
+display: flex;
+flex-direction: column;
+justify-content: center;
+ align-content: center;
+ gap: 1.5rem;
+ user-select: none;
+
+ &__background{
+    height: 12rem;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3rem;
+    border: 2px solid white;
+ }
+    &__image{
+      height: 10rem;
+      border-radius: 2rem;
+    
+    }
+    &__user{
+      color: white;
+      text-align: center;
+      font-size: 2rem;
+      
+    }
+}
