@@ -3,10 +3,17 @@ import logofooter from "@assets/logofooter.svg";
 import iconfb from "@assets/iconofacebookstreamix.svg";
 import iconig from "@assets/iconoinstraganfooter.svg";
 import icontik from "@assets/iconotiktokstreamix.svg";
+import iconarrow from "@assets/iconarrowdrow.svg"
 import "./footer.scss";
 import { FooterBanner } from "../footer-banner/FooterBanner";
+import { useState } from "react";
 export const Footer = () => {
   const location = useLocation();
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const handleItemClick = (item: string) => {
+    setActiveDropdown((prev) => (prev === item ? null : item)); // Alterna entre activo e inactivo
+  };
+
   return (
     <footer className="footer">
       <div className="footer__contentall">
@@ -41,9 +48,11 @@ export const Footer = () => {
 
           <ul className="footer__colum3">
             <li>Sobre Streamix</li>
-            <li>Mantente en Contacto</li>
+            <li   className={`footer__drowparent ${activeDropdown === "contact" ? "active" : ""}`}
+              onClick={() => handleItemClick("contact")}
+            >Mantente en Contacto <span><img src={iconarrow} alt=" icon drowp"/></span></li>
             <li>
-              <div>
+              <div className="footer__drow">
                 <p>Preguntas Frecuentes</p>
                 <p>Sugerencias y Feedback</p>
               </div>
@@ -51,9 +60,14 @@ export const Footer = () => {
           </ul>
 
           <ul className="footer__colum4">
-            <li>Información legal</li>
-            <li>Términos y Condiciones</li>
-            <li>Política de Privacidad</li>
+            <li  className={`footer__drowparent ${activeDropdown === "legal" ? "active" : ""}`}
+              onClick={() => handleItemClick("legal")} >Información legal <span><img src={iconarrow} alt=" icon drowp"/></span></li>
+            <li>
+              <div className="footer__drow">
+                <p>Términos y Condiciones</p>
+                <p>Política de Privacidad</p>
+              </div>
+            </li>
           </ul>
         </div>
       </div>

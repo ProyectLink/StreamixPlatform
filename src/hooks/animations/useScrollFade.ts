@@ -1,7 +1,9 @@
 import { useEffect, useState, useRef, RefObject } from "react";
-export const useScrollFade = (threshold: number = 0.32): [RefObject<HTMLElement | null>, boolean] => {
+
+export const useScrollFade = <T extends HTMLElement>(threshold: number = 0.32): [RefObject<T | null>, boolean] => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<T>(null);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -11,15 +13,12 @@ export const useScrollFade = (threshold: number = 0.32): [RefObject<HTMLElement 
       },
       { threshold }
     );
+
     const element = ref.current;
-    if (element) {
-      observer.observe(element);
-    }
+    if (element) observer.observe(element);
 
     return () => {
-      if (element) {
-        observer.unobserve(element);
-      }
+      if (element) observer.unobserve(element);
     };
   }, [threshold]);
 

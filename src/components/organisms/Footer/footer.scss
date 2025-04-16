@@ -13,7 +13,6 @@
         display: flex;
         flex-direction: column;
         gap: 4rem;
-
     }
     &__logo{
         width: 20rem;
@@ -37,15 +36,22 @@
     }
     
     &__grid{
-        display: grid;
-        grid-template-columns: 32rem repeat(3,1fr);
-        gap: 8.2rem;
-        justify-items: center;
+      
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        @include tablet-small {
+            display: grid;
+            grid-template-columns: 32rem repeat(3,1fr);
+            gap: 8.2rem;
+            justify-items: center;
+        }
         @include desktop-large {
             gap: 10rem;
         }
        
     }
+    
     &__colum1, &__colum2, &__colum3, &__colum4{
         display: flex;
         flex-direction: column;
@@ -61,6 +67,27 @@
         line-height: 1.4;
        }
     }
+    &__drowparent{
+        display: flex;
+        justify-content: space-between;
+       
+    }
+    &__drow{
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height .5s, opacity .2s, overflow .3s;
+    }
+    &__drowparent.active + li &__drow{
+       
+       
+       @include tablet-small {
+        max-height: 20rem;
+        overflow: visible;
+        opacity: 1;
+       }
+      
+     }
     p{
         color: #E3E1FF;
         font-family: var(--font-primary);

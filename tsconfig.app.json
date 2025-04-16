@@ -37,7 +37,9 @@
       "@layouts/*": ["src/app/layouts/*"],
       "@utils/*": ["src/utils/*"],
       "@store/*": ["src/store/*"],
-      "@types/*": ["src/types/*"]
+      "@types/*": ["src/types/*"],
+      "@context/*": ["src/context/*"],
+      "@type/*": ["src/types/global/*"],
     }
   },
   "include": ["src"]
