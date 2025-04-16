@@ -70,6 +70,11 @@
     &__drowparent{
         display: flex;
         justify-content: space-between;
+        &--icon{
+            @include laptop-small{
+                display: none;
+            }
+        }
        
     }
     &__drow{
@@ -77,14 +82,23 @@
         overflow: hidden;
         opacity: 0;
         transition: max-height .5s, opacity .2s, overflow .3s;
+        @include laptop-small{
+            max-height: unset;
+            overflow: visible;
+            opacity: 1;
+        }
+       
     }
+   
     &__drowparent.active + li &__drow{
        
-       
-       @include tablet-small {
         max-height: 20rem;
         overflow: visible;
         opacity: 1;
+       @include laptop-small {
+      max-height: unset;
+      overflow: visible;
+      opacity: 1;
        }
       
      }

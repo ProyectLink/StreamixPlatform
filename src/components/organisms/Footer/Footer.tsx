@@ -50,7 +50,7 @@ export const Footer = () => {
             <li>Sobre Streamix</li>
             <li   className={`footer__drowparent ${activeDropdown === "contact" ? "active" : ""}`}
               onClick={() => handleItemClick("contact")}
-            >Mantente en Contacto <span><img src={iconarrow} alt=" icon drowp"/></span></li>
+            >Mantente en Contacto <span className="footer__drowparent--icon"><img src={iconarrow} alt=" icon drowp"/></span></li>
             <li>
               <div className="footer__drow">
                 <p>Preguntas Frecuentes</p>
@@ -61,7 +61,7 @@ export const Footer = () => {
 
           <ul className="footer__colum4">
             <li  className={`footer__drowparent ${activeDropdown === "legal" ? "active" : ""}`}
-              onClick={() => handleItemClick("legal")} >Información legal <span><img src={iconarrow} alt=" icon drowp"/></span></li>
+              onClick={() => handleItemClick("legal")} >Información legal <span className="footer__drowparent--icon"><img src={iconarrow} alt=" icon drowp"/></span></li>
             <li>
               <div className="footer__drow">
                 <p>Términos y Condiciones</p>

@@ -5,6 +5,7 @@ import logo from "@assets/logo.svg";
 import { useScrollRef } from "@hooks/useScrollRef";
 import { clsx } from "clsx";
 import styles from "./navbar.module.scss";
+import iconuserlogin from "@assets/User.svg";
 
 export const navItems = [
   { label: "Inicio", href: "/", title: "Página de inicio" },
@@ -72,8 +73,11 @@ export const Navbar = () => {
             className={styles.navbar__session}
             onClick={handleContactClick}
           >
-            Iniciar Sesión
+            Suscribete
           </RippleButton>
+          <button className={styles["navbar__btn-login"]}>
+            <img src={iconuserlogin} alt="icono para login" />
+          </button>
         </div>
       </div>
     </nav>
