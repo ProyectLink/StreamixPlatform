@@ -20,10 +20,10 @@ icon={perfiles.icon}
   return (
     <section className="container-perfil">
       {accountCreated}
-      <AvatarAdd
+     {profileAvatar.length < 2 && <AvatarAdd
       text="Nueva Cuenta"
       icon={iconDefault}
-      />
+      />}
     </section>
   )
 }
